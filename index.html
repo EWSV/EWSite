@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EverWorld — Minecraft сервер</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description" content="EverWorld — Minecraft сервер. Привилегии: Божество, Жнец, Гладиатор, Берсерк, Легенда, Сумрак, Воин, Страж. IP: mc.EverWorld.ru"/>
+</head>
+<body>
+  <canvas id="bg-pixels"></canvas>
+  <header class="nav glass">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="images/logo.svg" alt="EverWorld" class="logo"/>
+        <div class="brand-text">
+          <span class="name">EverWorld</span>
+          <span class="ip">IP: mc.EverWorld.ru</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#ranks">Привилегии</a>
+        <a href="#about">О сервере</a>
+        <a href="#links">Ссылки</a>
+        <a href="#ranks" class="btn btn-primary" data-ripple>Играть</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <div class="badge glow">Официальный сервер</div>
+        <h1 class="title"><span class="accent">Ever</span>World</h1>
+        <p class="subtitle">Добро пожаловать на технологичный Minecraft-сервер с пиксельной душой! Красные и оранжевые оттенки — фирменные цвета сервера. Заходи, строй, побеждай!</p>
+        <div class="cta">
+          <a href="#ranks" class="btn btn-primary" data-ripple>Выбрать привилегию</a>
+          <a href="#links" class="btn btn-ghost" data-ripple>Ссылки проекта</a>
+        </div>
+      </div>
+      <div class="parallax">
+        <img src="images/grass.svg" class="layer" data-depth="0.06" alt="grass block"/>
+        <img src="images/sun.svg" class="layer" data-depth="0.12" alt="sun"/>
+        <img src="images/clouds.svg" class="layer" data-depth="0.2" alt="clouds"/>
+      </div>
+    </div>
+    <a href="#ranks" class="scroll-hint">прокрути</a>
+  </section>
+  <section id="ranks" class="section">
+    <div class="container">
+      <h2 class="section-title">Привилегии</h2>
+      <p class="section-sub">Выбери стиль игры и получи дополнительные возможности.</p>
+      <div class="grid ranks">
+        <div class="rank-card rank-god reveal tilt">
+          <div class="rank-badge">УНИКАЛЬНАЯ ПРИВИЛЕГИЯ</div>
+          <div class="rank-head">
+            <img src="images/icon-god.svg" alt="Божество"/>
+            <h3>Божество</h3>
+          </div>
+          <p>Абсолютная сила. Эффекты, полёт, эксклюзивные команды и косметика.</p>
+          <a href="#" class="btn btn-outline" data-ripple>Выбрать</a>
+        </div>
+
+        <div class="rank-card rank-reaper reveal tilt">
+          <div class="rank-head">
+            <img src="images/icon-reaper.svg" alt="Жнец"/>
+            <h3>Жнец</h3>
+          </div>
+          <p>Красно-чёрная мощь. PvP-бонусы, телепорт, домашние точки.</p>
+          <a href="#" class="btn btn-outline" data-ripple>Выбрать</a>
+        </div>
+
+        <div class="rank-card rank-gladiator reveal tilt">
+          <div class="rank-head">
+            <img src="images/icon-gladiator.svg" alt="Гладиатор"/>
+            <h3>Гладиатор</h3>
+          </div>
+          <p>Аренный боец. Ускоренные киты, усиленные награды за дуэли.</p>
+          <a href="#" class="btn btn-outline" data-ripple>Выбрать</a>
+        </div>
+
+        <div class="rank-card rank-berserk reveal tilt">
+          <div class="rank-head">
+            <img src="images/icon-berserk.svg" alt="Берсерк"/>
+            <h3>Берсерк</h3>
+          </div>
+          <p>Серый зверь боя. Рывки, усиленный урон и устойчивость.</p>
+          <a href="#" class="btn btn-outline" data-ripple>Выбрать</a>
+        </div>
+
+        <div class="rank-card rank-legend reveal tilt">
+          <div class="rank-head">
+            <img src="images/icon-legend.svg" alt="Легенда"/>
+            <h3>Легенда</h3>
+          </div>
+          <p>Золотой статус. Бонусные кейсы, редкие косметические эффекты.</p>
+          <a href="#" class="btn btn-outline" data-ripple>Выбрать</a>
+        </div>
+
+        <div class="rank-card rank-dusk reveal tilt">
+          <div class="rank-head">
+            <img src="images/icon-dusk.svg" alt="Сумрак"/>
+            <h3>Сумрак</h3>
+          </div>
+          <p>Мягкий розовый стиль. Стильные теги, усиленные ежедневные награды.</p>
+          <a href="#" class="btn btn-outline" data-ripple>Выбрать</a>
+        </div>
+
+        <div class="rank-card rank-warrior reveal tilt">
+          <div class="rank-head">
+            <img src="images/icon-warrior.svg" alt="Воин"/>
+            <h3>Воин</h3>
+          </div>
+          <p>Зелёная мощь. Улучшенные киты, командные бонусы.</p>
+          <a href="#" class="btn btn-outline" data-ripple>Выбрать</a>
+        </div>
+
+        <div class="rank-card rank-guardian reveal tilt">
+          <div class="rank-head">
+            <img src="images/icon-guardian.svg" alt="Страж"/>
+            <h3>Страж</h3>
+          </div>
+          <p>Синяя оборона. Дополнительные привилегии защиты и охраны региона.</p>
+          <a href="#" class="btn btn-outline" data-ripple>Выбрать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="section glass">
+    <div class="container">
+      <h2 class="section-title">О сервере</h2>
+      <p class="section-sub">EverWorld — это уютное сообщество, честный баланс и регулярные ивенты. Присоединяйся и стань частью легенды!</p>
+      <div class="grid about">
+        <div class="card reveal">
+          <h4>Фирменные цвета</h4>
+          <p>Красно-оранжевая тема интерфейса — узнаваемый стиль EverWorld.</p>
+        </div>
+        <div class="card reveal">
+          <h4>Оптимизация</h4>
+          <p>Лёгкие SVG и CSS-анимации: красиво и быстро даже на слабых ПК.</p>
+        </div>
+        <div class="card reveal">
+          <h4>Микро-анимации</h4>
+          <p>Параллакс, пиксельный фон, риппл на кнопках, плавные появления.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="links" class="section">
+    <div class="container">
+      <h2 class="section-title">Ссылки проекта</h2>
+      <div class="links-grid reveal">
+        <a class="link glass" href="https://everworld.ru" target="_blank" rel="noopener">Официальный сайт: everworld.ru</a>
+        <a class="link glass" href="https://vk.com/everworldd" target="_blank" rel="noopener">Официальная группа ВК: vk.com/everworldd</a>
+        <button class="link glass" class="copyip" id="copy-ip" target="_blank" rel="noopener">IP сервера: mc.EverWorld.ru</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container foot-inner">
+      <div>© <span id="year"></span> EverWorld</div>
+      <div class="small">Все права защищены. Обращайтесь в лс к Админу за вопросиками</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

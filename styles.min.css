@@ -1,0 +1,121 @@
+:root{
+  --bg: #0d0d0f;
+  --ink: #fff7ee;
+  --muted:#ffd9c0;
+  --accent:#ff5a3c;
+  --accent-2:#ffb43c;
+  --panel:#161617;
+  --glass: rgba(255, 255, 255, 0.06);
+  --border: rgba(255,255,255,0.12);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', Arial, sans-serif;
+  color:var(--ink);
+  background:
+    linear-gradient(180deg, rgba(255,90,60,.08), rgba(255,180,60,.06), transparent 60%),
+    var(--bg);
+  overflow-x:hidden;
+}
+.container{max-width:1200px; margin:0 auto; padding:0 24px}
+
+.nav{position:fixed; inset:0 0 auto 0; z-index:1000}
+.nav-inner{height:72px; display:flex; align-items:center; justify-content:space-between}
+.brand{display:flex; align-items:center; gap:12px}
+.brand .name{font-weight:900; letter-spacing:.5px}
+.brand .ip{display:block; font-size:12px; color:var(--muted)}
+.logo{width:32px; height:32px}
+nav a{color:var(--ink); text-decoration:none; margin-left:16px; padding:10px 14px; border-radius:10px}
+nav a:hover{background:rgba(255,255,255,.06)}
+.glass{background:var(--glass); backdrop-filter:saturate(160%) blur(10px); border-bottom:1px solid var(--border)}
+
+.btn{display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:0 18px; border-radius:10px; border:1px solid var(--border); color:var(--ink); text-decoration:none; position:relative; overflow:hidden; transition:.18s}
+.btn-primary{background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#1a0e03; border:0}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.06)}
+.btn-outline{background:transparent; border-color:rgba(255,180,60,.5)}
+.btn-outline:hover{background:rgba(255,180,60,.08)}
+
+.btn[data-ripple]::after{content:""; position:absolute; inset:0; background:radial-gradient( circle at var(--x) var(--y), rgba(255,255,255,.35), transparent 35% ); opacity:0; transition:opacity .35s}
+.btn[data-ripple].rippling::after{opacity:1}
+
+.hero{padding:140px 0 100px; position:relative}
+.hero-inner{display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:center}
+.badge{display:inline-block; padding:8px 12px; border-radius:999px; font-size:12px; background:rgba(255,180,60,.15); border:1px solid rgba(255,180,60,.35)}
+.title{font-size:54px; line-height:1.05; margin:12px 0 10px; letter-spacing:.5px; text-shadow:0 0 28px rgba(255,90,60,.35)}
+.accent{color:var(--accent)}
+.subtitle{color:var(--muted); max-width:620px}
+.cta{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap}
+
+.parallax{position:relative; height:360px}
+.layer{position:absolute; width:100%; max-width:480px; right:0; filter:drop-shadow(0 16px 40px rgba(0,0,0,.35)); will-change:transform}
+.scroll-hint{position:absolute; bottom:14px; left:50%; transform:translateX(-50%); font-size:12px; color:var(--muted)}
+
+.section{padding:100px 0}
+.section-title{font-size:32px; text-align:center}
+.section-sub{color:var(--muted); text-align:center; max-width:720px; margin:10px auto 0}
+
+.grid{display:grid; gap:20px}
+
+.ranks{grid-template-columns: repeat(4, 1fr); margin-top:24px}
+.rank-card{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:18px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.rank-card:hover{transform:translateY(-6px); box-shadow:0 18px 50px rgba(0,0,0,.35)}
+.rank-badge{font-size:12px; padding:6px 10px; border-radius:999px; display:inline-block; margin-bottom:10px; background:rgba(255,255,255,.06); border:1px solid var(--border)}
+.rank-head{display:flex; align-items:center; gap:10px; margin-bottom:6px}
+.rank-head img{width:36px; height:36px}
+.rank-card p{color:var(--muted); min-height:54px}
+
+.rank-god{border-image: linear-gradient(135deg, #ff78ff, #9b6bff) 1; box-shadow: 0 0 0 2px rgba(255,120,255,.12) inset}
+.rank-reaper{border-image: linear-gradient(135deg, #ff2a2a, #5a0000) 1; box-shadow: 0 0 0 2px rgba(255,42,42,.1) inset}
+.rank-gladiator{border-image: linear-gradient(135deg, #ff5959, #a12a2a) 1; box-shadow: 0 0 0 2px rgba(255,89,89,.1) inset}
+.rank-berserk{border-image: linear-gradient(135deg, #ffffff, #9ea2a8) 1; box-shadow: 0 0 0 2px rgba(255,255,255,.08) inset}
+.rank-legend{border-image: linear-gradient(135deg, #ffd84a, #ff9e2a) 1; box-shadow: 0 0 0 2px rgba(255,216,74,.12) inset}
+.rank-dusk{border-image: linear-gradient(135deg, #ff9bd4, #ff71b3) 1; box-shadow: 0 0 0 2px rgba(255,155,212,.1) inset}
+.rank-warrior{border-image: linear-gradient(135deg, #21c06b, #0a5a2f) 1; box-shadow: 0 0 0 2px rgba(33,192,107,.1) inset}
+.rank-guardian{border-image: linear-gradient(135deg, #3aa0ff, #0a1f5a) 1; box-shadow: 0 0 0 2px rgba(58,160,255,.1) inset}
+
+.about{grid-template-columns: repeat(3, 1fr); margin-top:22px}
+.card{background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:18px; transition:transform .25s ease, box-shadow .25s ease}
+.card:hover{transform:translateY(-6px); box-shadow:0 18px 50px rgba(0,0,0,.35)}
+
+.links-grid{display:grid; grid-template-columns: 1fr; gap:12px; max-width:720px; margin:20px auto 0}
+.link {
+  display: block;
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  text-align: center; /* выравнивание по центру */
+}
+
+.copy-ip {
+  cursor: pointer;
+}
+
+.footer{padding:36px 0; border-top:1px solid var(--border); margin-top:20px}
+.foot-inner{display:flex; flex-direction:column; gap:6px; align-items:center; text-align:center}
+.small{color:#c8c8c8; font-size:12px}
+
+.reveal{opacity:0; transform: translateY(26px) scale(.98); transition: opacity .7s ease, transform .7s ease}
+.reveal.show{opacity:1; transform:none}
+
+.tilt{will-change: transform}
+
+#bg-pixels{position:fixed; inset:0; z-index:-1; background: radial-gradient(900px 500px at 80% 10%, rgba(255,90,60,.08), transparent 65%)}
+
+@media (max-width: 1024px){
+  .hero-inner{grid-template-columns:1fr; gap:24px}
+  .ranks{grid-template-columns: repeat(2, 1fr)}
+  .about{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  nav{display:none}
+  .title{font-size:42px}
+  .ranks{grid-template-columns: 1fr}
+}
